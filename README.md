@@ -1,2 +1,2 @@
-# HPGDML
-Highly Parallel Game Development Math Library
+# HPML
+Highly Parallel Math Library
