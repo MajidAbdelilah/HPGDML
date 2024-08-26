@@ -9,8 +9,16 @@ int main()
     Point i;
     i.x = 1;
     i.y = 1;
+    Point c;
+    c.x = 2;
+    c.y = -1;
 
-    Vector v = p - i;
-    std::cout << v.x << " " << v.y << std::endl;
+    Vector ip = p - i;
+    Vector cp = p - c;
+
+    // std::cout << v.x << " " << v.y << std::endl;
+    std::cout << ip.LengthSqrt() << "\n";
+    std::cout << cp.LengthSqrt() << "\n";
+
     return 0;
 }
