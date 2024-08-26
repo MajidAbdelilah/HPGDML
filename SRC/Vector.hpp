@@ -17,21 +17,25 @@ class Vector
     {
         return x*x + y*y;
     }
-    Vector operator+(Vector s) const
+    Vector operator+(const Vector &s) const
     {
         return Vector(x+s.x, y+s.y);
     }
-    Vector operator-(Vector s) const
+    Vector operator-(const Vector &s) const
     {
         return Vector(x-s.x, y-s.y);
     }
-    Vector operator*(float s) const
+    Vector operator*(const float &s) const
     {
         return Vector(x*s, y*s);
     }
-    Vector operator/(float s) const
+    Vector operator/(const float s) const
     {
         return Vector(x/s, y/s);
+    }
+    Vector Normalize() const
+    {
+        return *this / Length();
     }
     float x, y;
 };

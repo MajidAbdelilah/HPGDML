@@ -1,19 +1,16 @@
-#include "Point_Vec.hpp"
+#include "Vector.hpp"
 #include <iostream>
 
 int main()
 {
-    Vector v(3, 4);
+    Vector p(0, -5);
+    Vector i(4, 0);
 
-    std::cout << v.Length() << std::endl;
+    Vector pi = i + p;
 
-    Vector doubled = v * 2;
+    Vector normalized = pi;
 
-    std::cout << doubled.Length() << std::endl;
-
-    Vector halved = v / 2;
-
-    std::cout << halved.Length() << std::endl;
-
+    std::cout << normalized.x << " " << normalized.y << std::endl;
+    std::cout << normalized.Length() << std::endl;
     return 0;
 }
