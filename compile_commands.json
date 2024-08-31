@@ -1,0 +1,17 @@
+[
+    {
+        "file":"src/common.cpp",
+        "command":"ClCompile -DNDEBUG -DWIN32 -D_DEBUG -D_WINDOWS \"src/common.cpp\"",
+        "directory":"C:/Users/majid/source/repos/MajidAbdelilah/HPML"
+    },
+    {
+        "file":"src/dot.cpp",
+        "command":"ClCompile -DNDEBUG -DWIN32 -D_DEBUG -D_WINDOWS \"src/dot.cpp\"",
+        "directory":"C:/Users/majid/source/repos/MajidAbdelilah/HPML"
+    },
+    {
+        "file":"src/main.cpp",
+        "command":"ClCompile -DNDEBUG -DWIN32 -D_DEBUG -D_WINDOWS \"src/main.cpp\"",
+        "directory":"C:/Users/majid/source/repos/MajidAbdelilah/HPML"
+    }
+]

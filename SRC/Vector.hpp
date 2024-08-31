@@ -38,6 +38,10 @@ class Vector2
     {
         return *this / Length();
     }
+    float DotProduct(const Vector2& b)
+    {
+        return x * b.x + y * b.y;
+    }
     float x, y;
 };
 
@@ -78,6 +82,16 @@ class Vector3
     {
         return *this / Length();
     }
+    float DotProduct(const Vector3& b)
+    {
+        return x * b.x + y * b.y + z * b.z;
+    }
+	Vector3 Cross(const Vector3& v)
+	{
+		return Vector3(y * v.z - z * v.y, 
+                        z * v.x - x * v.z, 
+                        x * v.y - y * v.x);
+	}
     float x, y, z;
 };
 
@@ -118,6 +132,11 @@ class Vector4
     Vector4 Normalize() const
     {
         return *this / Length();
+    }
+
+    float DotProduct(const Vector4& b)
+    {
+        return x * b.x + y * b.y + z * b.z + w * b.w;
     }
     float x, y, z, w;
 };

@@ -32,7 +32,7 @@ class EAngle
             p = 89;
         if(p < -89)
             p = -89;
-
+        
         while(y < -180)
             y += 360;
         while(y > 180)
