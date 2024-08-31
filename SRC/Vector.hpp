@@ -1,3 +1,4 @@
+#pragma once
 #include <cmath>
 #include <math.h>
 
@@ -29,7 +30,7 @@ class Vector2
     {
         return Vector2(x*s, y*s);
     }
-    Vector2 operator/(const float s) const
+    Vector2 operator/(const float &s) const
     {
         return Vector2(x/s, y/s);
     }
@@ -69,7 +70,7 @@ class Vector3
     {
         return Vector3(x * s, y * s, z * s);
     }
-    Vector3 operator/(const float s) const
+    Vector3 operator/(const float &s) const
     {
         return Vector3(x/s, y/s, z/s);
     }
@@ -110,7 +111,7 @@ class Vector4
     {
         return Vector4(x * s, y * s, z * s, w * s);
     }
-    Vector4 operator/(const float s) const
+    Vector4 operator/(const float &s) const
     {
         return Vector4(x/s, y/s, z/s, w/s);
     }

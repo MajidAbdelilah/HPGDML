@@ -1,16 +1,16 @@
 #include "Vector.hpp"
+#include "dot.hpp"
 #include <iostream>
 
 int main()
 {
-    Vector p(0, -5);
-    Vector i(4, 0);
+    Vector2 p(0, 0);
+    Vector2 i(2, 0);
 
-    Vector pi = i + p;
-
-    Vector normalized = pi;
-
-    std::cout << normalized.x << " " << normalized.y << std::endl;
-    std::cout << normalized.Length() << std::endl;
+    Vector2 ip = p - i;
+    Vector2 view(3, 0);
+    Vector2 normalized = ip.Normalize();
+    view = view.Normalize();
+    std::cout << DotProduct(normalized, view) << std::endl;
     return 0;
 }
