@@ -4,7 +4,12 @@
 
 class Vector2
 {
-    public:
+public:
+	Vector2()
+	{
+		x = 0;
+		y = 0;
+	}
     Vector2(float X, float Y)
     {
         x = X;
@@ -48,6 +53,12 @@ class Vector2
 class Vector3
 {
     public:
+	Vector3()
+	{
+		x = 0;
+		y = 0;
+		z = 0;
+	}
     Vector3(float X, float Y, float Z)
     {
         x = X;
@@ -97,7 +108,14 @@ class Vector3
 
 class Vector4
 {
-    public:
+public:
+    Vector4()
+    {
+		x = 0;
+		y = 0;
+		z = 0;
+		w = 0;
+    }
     Vector4(float X, float Y, float Z, float W)
     {
         x = X;
