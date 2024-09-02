@@ -43,7 +43,7 @@ public:
     {
         return *this / Length();
     }
-    float DotProduct(const Vector2& b)
+    float DotProduct(const Vector2& b) const
     {
         return x * b.x + y * b.y;
     }
@@ -93,16 +93,20 @@ class Vector3
     {
         return *this / Length();
     }
-    float DotProduct(const Vector3& b)
+    float DotProduct(const Vector3& b) const
     {
         return x * b.x + y * b.y + z * b.z;
     }
-	Vector3 Cross(const Vector3& v)
+	Vector3 Cross(const Vector3& v) const
 	{
 		return Vector3(y * v.z - z * v.y, 
                         z * v.x - x * v.z, 
                         x * v.y - y * v.x);
 	}
+    Vector3 Project(const Vector3& v) const
+    {
+		return v * (DotProduct(v) / v.LengthSqrt());
+    }
     float x, y, z;
 };
 
@@ -152,7 +156,7 @@ public:
         return *this / Length();
     }
 
-    float DotProduct(const Vector4& b)
+    float DotProduct(const Vector4& b) const
     {
         return x * b.x + y * b.y + z * b.z + w * b.w;
     }
